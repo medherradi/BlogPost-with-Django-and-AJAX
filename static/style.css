@@ -1,0 +1,20 @@
+.container {
+    background-color: gray;
+}
+
+
+.dz{
+    border: dashed !important;
+    border-color: #ccc;
+    border-radius: 10px !important;
+}
+
+.dz:hover {
+    background-color: aliceblue !important;
+}
+
+
+.not-visible {
+    display: none;
+}
+

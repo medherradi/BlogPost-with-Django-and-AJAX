@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block content %}
+<div class="columns">
+      {% if error_message %}
+        <div class="column is-half is-offset-one-quarter">
+          <div class="notification is-danger is-light has-text-centered">
+            <button class="delete"></button>
+            <strong>{{error_message}}</strong>
+          </div>
+        </div>
+      {% endif %}
+</div>
+    
+<div class="columns is-mobile is-centered mb-5">
+      <div class="column is-4">
+          <div class="content mt-4"><h2>User registration</h2></div>
+          <form action="" method="POST">
+              {% csrf_token %}
+              {% for field in form %}
+              <div class="field"> 
+                <label for="{{ field.id_for_label }}" class="label">{{ field.html_name }}</label>
+                {{ field }}
+              </div>
+              {% endfor %}
+              <div class="control mt-5 has-text-centered">
+                <button type="submit" class="button has-background-info-dark" style="width:250px;height:45px;"><span class="icon is-small">
+                  <i class="fas fa-check"></i>
+                </span>
+                <span> login </span></button>
+              </div>
+          </form>
+      </div>
+</div>
+{% endblock content %}

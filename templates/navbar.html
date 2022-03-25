@@ -1,0 +1,49 @@
+{% url 'posts:home-view' as path_to_home %}
+{% url 'posts:post-list' as path_to_list %}
+{% url 'profiles:my-profile' as path_to_my_profile %}
+{% url 'login' as path_to_login %}
+{% url 'logout' as path_to_logout %}
+{% load static %}
+
+<nav class="navbar is-spaced is-light mb-6" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand ml-6">
+      <a class="navbar-item-img-max-height" href="{{path_to_home}}">
+        <img src="{% static 'faviconweb.png' %}" width="80" height="80">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu ml-2">
+      <div class="navbar-start">
+        <a class="navbar-item " href="{{path_to_home}}">
+          <strong>Home</strong>
+        </a>
+
+        <a class="navbar-item " href="{{path_to_list}}">
+          <strong>Post</strong>
+        </a>
+  
+        <a class="navbar-item" href="{{path_to_my_profile}}">
+          <strong>Profile</strong>
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons mr-6">
+            <a class="button is-link" href={{path_to_login}}>
+              <strong>Log in</strong>
+            </a>
+            <a class="button is-black" href={{path_to_logout}}>
+              <strong>Sign up</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</nav>
