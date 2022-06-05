@@ -10,3 +10,7 @@
 ### - Update/delete only for the owner of the post
 
 ![blogpost](https://user-images.githubusercontent.com/100420312/172066116-b4735ad1-c5ec-4492-8caa-f3343d7cd375.png)
+
+
+
+![blogpost2](https://user-images.githubusercontent.com/100420312/172066177-9640371c-b536-4160-a559-03e8db606e89.png)
